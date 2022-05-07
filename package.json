@@ -17,6 +17,7 @@
 		"eslint": "latest",
 		"eslint-config-airbnb": "latest",
 		"eslint-config-prettier": "latest",
+		"eslint-plugin-import": "latest",
 		"eslint-plugin-jest": "latest",
 		"eslint-plugin-jsx-a11y": "latest",
 		"eslint-plugin-prettier": "latest",
