@@ -2,6 +2,8 @@ import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
 import { api } from "../api/api"
 import formReducer from "./slices/formSlice"
 
+console.log(process.env.NODE_ENV)
+
 export const store = configureStore({
 	reducer: {
 		[api.reducerPath]: api.reducer,
