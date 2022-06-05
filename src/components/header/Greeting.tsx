@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Box, Typography } from "@mui/material"
 import { FC } from "react"
+import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
 import nature from "../../assets/bg-image-650-1170-high.jpg"
 import { SIGN_IN_ID } from "../../constants"
 import { scrollTo } from "../../helpers/scrollTo"

@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/no-useless-undefined */
-import { Box } from "@mui/material"
 import { FC } from "react"
+import Box from "@mui/material/Box"
 import { useAppSelector } from "../../store/hooks"
 import { selectAllUsers, useGetUsersQuery } from "../../store/slices/userSlice"
 

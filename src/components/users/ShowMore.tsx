@@ -1,5 +1,5 @@
-import { Box } from "@mui/material"
 import { FC, useState } from "react"
+import Box from "@mui/material/Box"
 import { useAppSelector } from "../../store/hooks"
 import { selectTotalPage, useLazyGetUsersQuery } from "../../store/slices/userSlice"
 import CustomButton from "../ui/CustomButton"

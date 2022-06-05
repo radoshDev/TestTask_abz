@@ -1,15 +1,17 @@
-import { FC } from "react"
+import { FC, lazy } from "react"
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query/react"
 import { SIGN_IN_ID } from "../../constants"
 import { useCreateUserMutation } from "../../store/slices/userSlice"
 import { FormFields } from "../../types/inputTypes"
 import { CreateUserResponse } from "../../types/userTypes"
-import Section from "../layout/Section"
-import Form from "./Form"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import { addFetchError, selectIsSuccess, success } from "../../store/slices/formSlice"
 import { createFormData } from "../../helpers/createFormData"
-import Success from "./Success"
+import Section from "../layout/Section"
+import Form from "./Form"
+import withSuspense from "../../hoc/withSuspense"
+
+const Success = lazy(() => import("./Success"))
 
 const FormSection: FC = () => {
 	const dispatch = useAppDispatch()
@@ -27,7 +29,7 @@ const FormSection: FC = () => {
 			dispatch(addFetchError(errorData.message))
 		}
 	}
-	if (isSuccess) return <Success />
+	if (isSuccess) return withSuspense(<Success />)
 	return (
 		<Section title="Working with POST request" id={SIGN_IN_ID}>
 			<Form onSubmit={handleSubmit} isLoading={isLoading} />

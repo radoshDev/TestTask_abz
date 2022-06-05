@@ -11,6 +11,7 @@ export const store = configureStore({
 		...getDefaultMiddleware({ serializableCheck: false }),
 		api.middleware,
 	],
+	devTools: process.env.NODE_ENV === "development",
 })
 
 export type AppDispatch = typeof store.dispatch

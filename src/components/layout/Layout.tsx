@@ -1,5 +1,5 @@
-import { Container } from "@mui/material"
 import { FC, ReactElement } from "react"
+import Container from "@mui/material/Container"
 
 type Props = {
 	children: ReactElement

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import Box from "@mui/material/Box"
 import { SxProps, Theme } from "@mui/material/styles"
 import { FC, ReactNode } from "react"
 

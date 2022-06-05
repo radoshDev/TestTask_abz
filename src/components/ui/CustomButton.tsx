@@ -1,5 +1,6 @@
-import { Button, SxProps, Theme } from "@mui/material"
 import { FC, MouseEventHandler, ReactNode } from "react"
+import Button from "@mui/material/Button"
+import { SxProps, Theme } from "@mui/material/styles"
 
 type Props = {
 	children: ReactNode
