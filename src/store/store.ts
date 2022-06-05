@@ -1,10 +1,16 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
-import counterReducer from "../features/counter/counterSlice"
+import { api } from "../api/api"
+import formReducer from "./slices/formSlice"
 
 export const store = configureStore({
 	reducer: {
-		counter: counterReducer,
+		[api.reducerPath]: api.reducer,
+		form: formReducer,
 	},
+	middleware: getDefaultMiddleware => [
+		...getDefaultMiddleware({ serializableCheck: false }),
+		api.middleware,
+	],
 })
 
 export type AppDispatch = typeof store.dispatch

@@ -76,7 +76,11 @@
 		"react/jsx-props-no-spreading": "off",
 		"react/no-array-index-key": "warn",
 		"react/react-in-jsx-scope": "off",
+		"react/require-default-props": "off",
+		"regexp/prefer-d": "off",
 		"no-restricted-exports": "off",
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"],
 		"unicorn/filename-case": [
 			"error",
 			{
@@ -87,6 +91,8 @@
 				"ignore": [".*\\.d\\.ts"]
 			}
 		],
+		"unicorn/no-array-for-each": "off",
+		"unicorn/no-null": "off",
 		"unicorn/prevent-abbreviations": [
 			"error",
 			{
